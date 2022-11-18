@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $mysqli = require __DIR__ . "/database.php";
     
-    $sql = sprintf("SELECT * FROM user
+    $sql = sprintf("SELECT * FROM admin
                     WHERE email = '%s'",
                    $mysqli->real_escape_string($_POST["email"]));
     
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
     
-    <h1>Loginss</h1>
+    <h1>Login</h1>
     
     <?php if ($is_invalid): ?>
         <em>Invalid login</em>

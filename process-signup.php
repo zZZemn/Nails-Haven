@@ -28,12 +28,12 @@ $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$sql = "INSERT INTO user (name, email, password_hash)
+$sql = "INSERT INTO admin (name, email, password_hash)
         VALUES (?, ?, ?)";
         
 $stmt = $mysqli->stmt_init();
 
-if ( ! $stmt->prepare($sql)) {
+if ( !$stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
 
@@ -44,7 +44,7 @@ $stmt->bind_param("sss",
                   
 if ($stmt->execute()) {
 
-    header("Location: profile.php");
+    header("Location: admin.php");
     exit;
     
 } else {
