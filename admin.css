@@ -11,7 +11,7 @@
 nav {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: pink;
     width: 200px;
     height: 100vh;
     position: relative;
@@ -38,13 +38,16 @@ nav ul li a{
     display: flex;
     width: 96%;
     height: 50px;
-    background-color: pink;
     align-items: center;
     padding-left: 10px;
 }
 
 .name {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+    border-top: 1px solid rgba(0, 0, 0, 0.158);
     font-weight: bolder;
+}
+
+nav ul li a:hover {
+    background-color: rgb(252, 203, 212);
 }
