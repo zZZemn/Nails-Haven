@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <h1>ADMIN</h1>
         
         <?php if ($is_invalid): ?>
-            <em>Invalid login</em>
+            <em>Wrong email or password!</em>
         <?php endif; ?>
         
         <form method="post">
