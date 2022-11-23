@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 ?>
 
@@ -12,5 +13,6 @@
 </head>
 <body>
     <div>This is admin page</div>
+    <a href="logout.php">log Out</a>
 </body>
 </html>
