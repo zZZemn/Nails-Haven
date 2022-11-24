@@ -25,11 +25,11 @@ if (isset($_SESSION["user_id"])) {
             <img src="img/logo.png" alt="Nails Haven">
             <ul>
                 <li><a href="admin-profile.php" class="name"><?= htmlspecialchars($user["name"]) ?></a></li>
-                <li><a href="#">Current Reservation</a></li>
+                <li><a href="admin.php">Current Reservation</a></li>
                 <li><a href="#">Reservation Archive</a></li>
                 <li><a href="#">Inventory</a></li>
                 <li><a href="#">Sales</a></li>
-                <li><a href="#">Option1</a></li>
+                <li><a href="logout.php">Log Out</a></li>
             </ul>
         </nav>
 
