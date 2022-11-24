@@ -9,6 +9,11 @@ if (isset($_SESSION["user_id"])) {
             WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
+
+    $sql2 = "SELECT * FROM admin_information
+            WHERE id = {$_SESSION["user_id"]}";
+    $result2 = $mysqli->query($sql2);
+    $user2 = $result2->fetch_assoc();
     }
 ?>
 
@@ -39,10 +44,27 @@ if (isset($_SESSION["user_id"])) {
                 <img src="img/Admin.png" alt="Admin">
                 <div class="admin-name-container">
                     <h1><?= htmlspecialchars($user["name"]) ?></h1>  
-                    <h5>Admin</h5>
+                    <h5><?= htmlspecialchars($user2["position"]) ?></h5>
                 </div>
             </div>
             <hr>
+            <div class="second-row">
+                <table border="1">
+                    <tr>
+                        <td class="bold"><h4>Address:</h4></td>
+                        <td><h5><?= htmlspecialchars($user2["address"]) ?></h5></td>
+                        <td><a href="#" class="edit">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="bold"><h4>Email:</h4></td>
+                        <td colspan="2"><h5><?= htmlspecialchars($user["email"]) ?></h5></td>
+                    </tr>
+                    <tr>
+                        <td class="bold"><h4>Contact No:</h4></td>
+                        <td colspan="2"><h5><?= htmlspecialchars($user2["contact_no"]) ?><h5></td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
     <?php else: ?>

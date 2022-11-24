@@ -43,3 +43,20 @@ hr {
 .first-row h1 {
     font-weight: 600;
 }
+
+.second-row {
+    padding-left: 12%;
+    margin-top: 2%;
+}
+
+.second-row table tr td {
+    padding: 10px;
+}
+
+.second-row table tr td h4{
+    font-weight: bolder;
+}
+
+.second-row table tr td h5 {
+    font-weight: 500;
+}
