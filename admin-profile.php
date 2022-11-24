@@ -49,11 +49,11 @@ if (isset($_SESSION["user_id"])) {
             </div>
             <hr>
             <div class="second-row">
-                <table border="1">
+                <table>
                     <tr>
                         <td class="bold"><h4>Address:</h4></td>
                         <td><h5><?= htmlspecialchars($user2["address"]) ?></h5></td>
-                        <td><a href="#" class="edit">Edit</a></td>
+                        <td class="no-padd"><a href="#" class="edit"><img src="img/edit-icon.ico" alt="Edit"></a></td>
                     </tr>
                     <tr>
                         <td class="bold"><h4>Email:</h4></td>

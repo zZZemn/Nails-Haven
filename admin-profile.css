@@ -60,3 +60,15 @@ hr {
 .second-row table tr td h5 {
     font-weight: 500;
 }
+
+.second-row table tr .no-padd {
+    padding: 0;
+}
+
+.edit img{
+    height: 25px;
+}
+
+.edit img:hover {
+    background-color: rgb(241, 241, 241);
+}
