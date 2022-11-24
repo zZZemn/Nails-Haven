@@ -24,7 +24,7 @@ if (isset($_SESSION["user_id"])) {
         <nav>
             <img src="img/logo.png" alt="Nails Haven">
             <ul>
-                <li><a href="#" class="name"><?= htmlspecialchars($user["name"]) ?></a></li>
+                <li><a href="admin-profile.php" class="name"><?= htmlspecialchars($user["name"]) ?></a></li>
                 <li><a href="#">Current Reservation</a></li>
                 <li><a href="#">Reservation Archive</a></li>
                 <li><a href="#">Inventory</a></li>
