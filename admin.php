@@ -16,7 +16,7 @@ if (isset($_SESSION["user_id"])) {
 <html>
 <head>
     <title>Admin</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin-nav.css">
     <link rel="stylesheet" href="current-reservation.css">
 </head>
