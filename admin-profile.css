@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.name {
+    font-weight: 600;
+}
+
+hr {
+    background-color: pink;
+    height: 2px;
+    border: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.admin-profile-content{
+    position: relative;
+    margin-left: 200px;
+    width: 83.9%;
+    height: 100vh;
+    padding-top: 3%;
+}
+
+.first-row {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    padding-left: 12%;
+}
+
+.first-row img {
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid pink;
+    margin-right: 5%;
+}
+
+.first-row h1 {
+    font-weight: 600;
+}

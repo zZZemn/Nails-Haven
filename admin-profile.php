@@ -17,8 +17,9 @@ if (isset($_SESSION["user_id"])) {
 <html>
 <head>
     <title>Admin</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin-nav.css">
+    <link rel="stylesheet" href="admin-profile.css">
 </head>
 <body>
     <?php if (isset($user)): ?>
@@ -34,7 +35,14 @@ if (isset($_SESSION["user_id"])) {
             </ul>
         </nav>
         <div class="admin-profile-content">
-            <h1 class="admin-name"><?= htmlspecialchars($user["name"])?></h1>
+            <div class="first-row">
+                <img src="img/Admin.png" alt="Admin">
+                <div class="admin-name-container">
+                    <h1><?= htmlspecialchars($user["name"]) ?></h1>  
+                    <h5>Admin</h5>
+                </div>
+            </div>
+            <hr>
         </div>
 
     <?php else: ?>

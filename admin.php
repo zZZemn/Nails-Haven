@@ -17,7 +17,8 @@ if (isset($_SESSION["user_id"])) {
 <head>
     <title>Admin</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin-nav.css">
+    <link rel="stylesheet" href="current-reservation.css">
 </head>
 <body>
     <?php if (isset($user)): ?>
@@ -25,7 +26,7 @@ if (isset($_SESSION["user_id"])) {
             <img src="img/logo.png" alt="Nails Haven">
             <ul>
                 <li><a href="admin-profile.php" class="name"><?= htmlspecialchars($user["name"]) ?></a></li>
-                <li><a href="admin.php">Current Reservation</a></li>
+                <li><a href="admin.php" class="Current-Reservation">Current Reservation</a></li>
                 <li><a href="#">Reservation Archive</a></li>
                 <li><a href="#">Inventory</a></li>
                 <li><a href="#">Sales</a></li>

@@ -14,7 +14,7 @@ nav {
     background-color: pink;
     width: 200px;
     height: 100vh;
-    position: relative;
+    position: fixed;
 }
 
 nav img {
@@ -41,7 +41,6 @@ nav ul li a{
 .name {
     border-bottom: 1px solid rgba(0, 0, 0, 0.158);
     border-top: 1px solid rgba(0, 0, 0, 0.158);
-    font-weight: bolder;
 }
 
 nav ul li a:hover {
