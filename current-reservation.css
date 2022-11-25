@@ -64,3 +64,11 @@
     background-color: white;
     cursor: pointer;
 }
+
+.btn button:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.btn2 button:hover {
+    background-color: rgb(255, 203, 203);
+}
