@@ -23,7 +23,6 @@ if (isset($_SESSION["user_id"])) {
     <title>Edit Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin-nav.css">
-    <link rel="stylesheet" href="admin-profile.css">
 </head>
 <body>
     <?php if (isset($user)): ?>
@@ -38,33 +37,6 @@ if (isset($_SESSION["user_id"])) {
                 <li><a href="logout.php">Log Out</a></li>
             </ul>
         </nav>
-        <div class="admin-profile-content">
-            <div class="first-row">
-                <img src="img/<?= $user2['picture']?>" alt="Admin">
-                <div class="admin-name-container">
-                    <h1><?= htmlspecialchars($user["name"]) ?></h1>  
-                    <h5><?= htmlspecialchars($user2["position"]) ?></h5>
-                </div>
-            </div>
-            <hr>
-            <div class="second-row">
-                <table>
-                    <tr>
-                        <td class="bold"><h4>Address:</h4></td>
-                        <td><h5><?= htmlspecialchars($user2["address"]) ?></h5></td>
-                        <td class="no-padd"><a href="admin-profile-edit.php" class="edit"><img src="img/edit-icon.ico" alt="Edit"></a></td>
-                    </tr>
-                    <tr>
-                        <td class="bold"><h4>Email:</h4></td>
-                        <td colspan="2"><h5><?= htmlspecialchars($user["email"]) ?></h5></td>
-                    </tr>
-                    <tr>
-                        <td class="bold"><h4>Contact No:</h4></td>
-                        <td colspan="2"><h5><?= htmlspecialchars($user2["contact_no"]) ?><h5></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
 
     <?php else: ?>
         <div class="noacc">
