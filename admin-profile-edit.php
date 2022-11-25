@@ -17,11 +17,10 @@ if (isset($_SESSION["user_id"])) {
     }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin</title>
+    <title>Edit Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin-nav.css">
     <link rel="stylesheet" href="admin-profile.css">
