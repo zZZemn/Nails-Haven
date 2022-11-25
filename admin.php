@@ -9,13 +9,17 @@ if (isset($_SESSION["user_id"])) {
             WHERE id = {$_SESSION["user_id"]}";
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
-    }
+    
+    $reservation = "SELECT * FROM reservation ORDER BY app_date";
+    $reservation_result = $mysqli->query($reservation);
+}
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin</title>
+    <title>Reservation</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin-nav.css">
     <link rel="stylesheet" href="current-reservation.css">
@@ -25,7 +29,7 @@ if (isset($_SESSION["user_id"])) {
         <nav>
             <img src="img/logo.png" alt="Nails Haven">
             <ul>
-                <li><a href="admin-profile.php" class="name"><?= htmlspecialchars($user["name"]) ?></a></li>
+                <li><a href="admin-profile.php" class="name"><?= htmlspecialchars($user['name']) ?></a></li>
                 <li><a href="admin.php" class="Current-Reservation">Current Reservation</a></li>
                 <li><a href="#">Reservation Archive</a></li>
                 <li><a href="#">Inventory</a></li>
@@ -33,6 +37,37 @@ if (isset($_SESSION["user_id"])) {
                 <li><a href="logout.php">Log Out</a></li>
             </ul>
         </nav>
+        <div class="reservation">
+            <h1 class="app-title">Appointment</h1>
+            <table border="1">
+                <tr class="table-head">
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Contact</td>
+                    <td>Address</td>
+                    <td>Appointment Date</td>
+                    <td>Appointment Time</td>
+                    <td>Action</td>
+                </tr>
+                <?php  if ($reservation_result->num_rows > 0) {
+                            while($row = $reservation_result->fetch_assoc()) {
+                                    echo "<tr>
+                                            <td> ". $row['id'] . "</td>
+                                            <td> ". $row['f_name'].$row['l_name'] . "</td>
+                                            <td> ". $row['email'] . "</td>
+                                            <td> ". $row['contact_no'] . "</td>
+                                            <td> ". $row['address'] . "</td>
+                                            <td> ". $row['app_date'] . "</td>
+                                            <td> ". $row['app_time'] . "</td>
+                                            <td><button>Edit</button><button>Delete</button></td>
+                                        </tr>";
+                            }
+                        }           
+                ?>
+                
+            </table>
+        </div>
 
 
     <?php else: ?>
