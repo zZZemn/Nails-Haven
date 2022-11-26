@@ -43,24 +43,24 @@ if (isset($_SESSION["user_id"])) {
                 <tr class="table-head">
                     <td>ID</td>
                     <td>Name</td>
-                    <td>Email</td>
                     <td>Contact</td>
-                    <td>Address</td>
                     <td>Date</td>
                     <td>Time</td>
+                    <td>Reference Number</td>
                     <td colspan="2">Action</td>
                 </tr>
 
                 <?php  if ($reservation_result->num_rows > 0) {
                             while($row = $reservation_result->fetch_assoc()) {
+                                $time = $row['app_time'];
+                                $mod_time = substr($time,0,5);
                                     echo "<tr>
                                             <td class="."userID".">".$row['id']."</td>
                                             <td>".$row['f_name']." ".$row['l_name']."</td>
-                                            <td>".$row['email']."</td>
                                             <td>".$row['contact_no']."</td>
-                                            <td>".$row['address']."</td>
                                             <td>".$row['app_date']."</td>
-                                            <td>".$row['app_time']."</td>
+                                            <td>".$mod_time."</td>
+                                            <td>".$row['ref_num']."</td>
                                             <td class="."btn"." style="."border-right:none"."><button>Edit</button></td>
                                             <td class="."btn2"." style="."border-left:none".">
                                                 <a href='delete-row.php?id=".$row['id'].";?>'>Delete</a> 

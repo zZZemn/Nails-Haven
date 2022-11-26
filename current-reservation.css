@@ -56,7 +56,7 @@
     cursor: pointer;
 }
 
-.btn2 input {
+.btn2 a {
     color: red;
     padding: 2px;
     font-weight: 500;
@@ -70,6 +70,6 @@
     background-color: rgb(238, 238, 238);
 }
 
-.btn2 input:hover {
+.btn2 a:hover {
     background-color: rgb(255, 203, 203);
 }
