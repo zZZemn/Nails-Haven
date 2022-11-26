@@ -13,6 +13,7 @@
 .reservation table {
     margin: auto;
     border-collapse: collapse;
+    width: 100%;
 }
 
 .reservation table tr td {

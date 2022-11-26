@@ -10,7 +10,7 @@ if (isset($_SESSION["user_id"])) {
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     
-    $reservation = "SELECT * FROM reservation ORDER BY app_date";
+    $reservation = "SELECT * FROM reservation ORDER by app_date";
     $reservation_result = $mysqli->query($reservation);
 }
 
@@ -52,9 +52,9 @@ if (isset($_SESSION["user_id"])) {
                 </tr>
 
                 <?php  if ($reservation_result->num_rows > 0) {
-                   //$i = 0;
+                   $i = 0;
                             while($row = $reservation_result->fetch_assoc()) {
-                                //$id[$i] = $row['id'];
+                                $id[$i] = $row['id'];
                                     echo "<tr>
                                             <td class="."userID".">".$row['id']."</td>
                                             <td>".$row['f_name']." ".$row['l_name']."</td>
@@ -65,11 +65,11 @@ if (isset($_SESSION["user_id"])) {
                                             <td>".$row['app_time']."</td>
                                             <td class="."btn"." style="."border-right:none"."><button>Edit</button></td>
                                             <td class="."btn2"." style="."border-left:none"."><form action='delete-row.php' method='POST'>
-                                                 <input type='hidden' value=".$row['id']." name='id'><input type='submit' name='delete' value='Del'>
+                                                 <input type='hidden' value=".$id[$i]." name='id'><input type='submit' name='delete' value='Del'>
                                             </td>
                                             </tr>";
                                            // echo $id[$i]."<br>";
-                                            //$i++;
+                                            $i++;
                             }
                         }           
                 ?>
