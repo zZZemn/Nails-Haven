@@ -55,7 +55,7 @@
     cursor: pointer;
 }
 
-.btn2 button {
+.btn2 input {
     color: red;
     padding: 2px;
     font-weight: 500;
@@ -69,6 +69,6 @@
     background-color: rgb(238, 238, 238);
 }
 
-.btn2 button:hover {
+.btn2 input:hover {
     background-color: rgb(255, 203, 203);
 }
