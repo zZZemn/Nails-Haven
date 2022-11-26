@@ -52,6 +52,7 @@ if (isset($_SESSION["user_id"])) {
                 </tr>
                 <?php  if ($reservation_result->num_rows > 0) {
                             while($row = $reservation_result->fetch_assoc()) {
+                                $id = $row['id'];
                                     echo "<tr>
                                             <td class="."userID".">".$row['id']."</td>
                                             <td>".$row['f_name']." ".$row['l_name']."</td>
