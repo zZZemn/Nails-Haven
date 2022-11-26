@@ -61,7 +61,9 @@ if (isset($_SESSION["user_id"])) {
                                             <td>".$row['app_date']."</td>
                                             <td>".$mod_time."</td>
                                             <td>".$row['ref_num']."</td>
-                                            <td class="."btn"." style="."border-right:none"."><button>Edit</button></td>
+                                            <td class="."btn"." style="."border-right:none".">
+                                                <a href='view-row.php?id=".$row['id'].";?>'>View</a> 
+                                            </td>
                                             <td class="."btn2"." style="."border-left:none".">
                                                 <a href='delete-row.php?id=".$row['id'].";?>'>Delete</a> 
                                             </td>
