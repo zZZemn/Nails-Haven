@@ -1,0 +1,81 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table tr td {
+    padding: 10px;
+    border: 0.5px solid black;
+}
+
+.client {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.id {
+    color: red;
+}
+
+.valid-id {
+    height: 180px;
+    width: 300px;
+}
+
+.appointment {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.receipt img{
+    display: block;
+    margin: auto;
+}
+
+.btn td {
+    text-align: center;
+    position: relative;
+}
+
+.btn td a {
+    text-decoration: none;
+    background-color: pink;
+    color: black;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+.back {
+    padding: 10px 40px;
+}
+
+.edit {
+    padding: 10px 30px;
+}
+
+.delete {
+    padding: 10px 20px;
+}
+
+.backtd {
+    border-right: none !important;
+}
+
+.edittd {
+    border-right: none !important;
+    border-left: none !important;
+}
+
+.deltd {
+    border-left: none !important;
+}
