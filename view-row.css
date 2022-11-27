@@ -25,9 +25,25 @@ body {
     position: relative;
     background-color: rgba(255, 192, 203, 0.5);
     width: 75%;
-    height: 95vh;
+    height: 97vh;
     display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.678);
     border-radius: 3px;
+}
+
+.back {
+    position: absolute;
+    right: 0;   
+}
+
+.back ion-icon {
+    font-size: 30px;
+    background-color: pink;
+    border: 1px solid rgba(0, 0, 0, 0.678);
+    border-top: 0;
+    border-right: 0;
+    color: black;
+    border-top-right-radius: 3px;
 }
 
 table {
@@ -58,8 +74,10 @@ table tr td {
 }
 
 .valid-id {
-    height: 180px;
-    width: 300px;
+    display: flex;
+    margin: auto;
+    height: 150px;
+    width: 250px;
 }
 
 .appointment {
@@ -96,11 +114,6 @@ table tr td {
     background-color: rgba(255, 192, 203, 0.479);
 }
 
-.back {
-    padding: 10px 10px;
-    float: right;
-}
-
 .edit {
     padding: 10px 25px;
 }
@@ -108,10 +121,6 @@ table tr td {
 .delete {
     padding: 10px 20px;
     float: left;
-}
-
-.backtd {
-    border-right: none !important;
 }
 
 .edittd {
