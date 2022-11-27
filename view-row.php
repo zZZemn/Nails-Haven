@@ -64,10 +64,11 @@
                     <td><?=$user['ref_num']?></td>
                 </tr>
                 <tr class="btn">
-                    <td class="edittd"><a class="edit" href='delete-row.php?id=".<?=$user['id']?>."'>Edit</a></td>
-                    <td class="deltd"><a class="delete" href='delete-row.php?id=".<?=$user['id']?>."'>Delete</a></td>
+                    <td class="edittd"><a class="edit" href='edit-row.php?id=<?=$user['id']?>'>Edit</a></td>
+                    <td class="deltd"><a class="delete" href='delete-row.php?id=<?=$user['id']?>'>Delete</a></td>
                 </tr>
             </table>
     </div>
 </body>
 </html>
+
