@@ -1,21 +1,41 @@
 <?php
-    $id = $_GET['id'];
-    $mysqli = require __DIR__ . "/database.php";
-    $sql = "SELECT * FROM reservation WHERE id = $id";
-    $result = $mysqli->query($sql);
-    $client = $result->fetch_assoc();
+    session_start();
 
-    $time = $client['app_time'];
-    $mod_time = substr($time,0,5);
-    ?>
+    if (isset($_SESSION["user_id"]))
+    {
+        $id = $_GET['id'];
+        $mysqli = require __DIR__ . "/database.php";
+        $sql = "SELECT * FROM reservation WHERE id = $id";
+        $result = $mysqli->query($sql);
+        $client = $result->fetch_assoc();
+
+        $time = $client['app_time'];
+        $mod_time = substr($time,0,5);
+    }
+?>
 
 <html>
     <head>
         <Title>Edit: <?=$client['f_name']?></Title>
+        <link rel="stylesheet" href="edit-row.css">
     </head>
     <body>
-        <form action="">
-            <table border="1">
+        <form name="frmEdit" method="POST" action="edit-process.php">
+            <table>
+                <tr>
+                    <td>
+                        <h4>ID:</h4>
+                    </td>
+                    <td>
+                        <h4><input type="text" name="id" id="id" readonly value="<?=$client['id']?>"></h4>
+                    </td>
+                    <td>
+                        <h4>Reference Number: </h4>
+                    </td>
+                    <td>
+                        <h4><?=$client['ref_num']?></h4>
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <label for="f_name">First Name: </label>
@@ -35,7 +55,7 @@
                         <label for="address">Address: </label>
                     </td>
                     <td colspan="3">
-                        <input type="text" name="adress" id="address" value="<?=$client['address']?>">
+                        <input type="text" name="address" id="address" value="<?=$client['address']?>">
                     </td>
                 </tr>
                 <tr>
@@ -67,6 +87,7 @@
                     </td>
                 </tr>
             </table>
+            <input type="submit" class="btn" name="save">
         </form>
     </body>
 </html>

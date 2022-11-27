@@ -1,12 +1,17 @@
 <?php
-    include "database.php";
-    $id=$_GET['id'];
-    $sql = "SELECT * FROM reservation WHERE id='$id'";
-    $result = $mysqli->query($sql);
-    $user = $result->fetch_assoc();
+    session_start();
 
-    $time = $user['app_time'];
-    $mod_time = substr($time,0,5); 
+    if (isset($_SESSION["user_id"]))
+        {
+            include "database.php";
+            $id=$_GET['id'];
+            $sql = "SELECT * FROM reservation WHERE id='$id'";
+            $result = $mysqli->query($sql);
+            $user = $result->fetch_assoc();
+
+            $time = $user['app_time'];
+            $mod_time = substr($time,0,5); 
+        }
 ?>
 
 <!DOCTYPE html>
