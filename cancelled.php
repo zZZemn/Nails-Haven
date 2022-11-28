@@ -62,10 +62,10 @@ if (isset($_SESSION["user_id"])) {
                                             <td>".$mod_time."</td>
                                             <td>".$row['ref_num']."</td>
                                             <td class="."btn"." style="."border-right:none".">
-                                                <a href='view-row.php?id=".$row['id']."'>View</a> 
+                                                <a href='view-cancelled-row.php?id=".$row['id']."'>View</a> 
                                             </td>
                                             <td class="."btn2"." style="."border-left:none".">
-                                                <a href='delete-row.php?id=".$row['id']."'>Delete</a> 
+                                                <a href='delete-cancelled-row.php?id=".$row['id']."'>Delete</a> 
                                             </td>
                                             </tr>";
                             }

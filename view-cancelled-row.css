@@ -1,0 +1,137 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('img/admin-bg2.jpg');
+    background-size: cover;
+}
+
+.logo {
+    position: absolute;
+    height: 50%;
+}
+
+.table-container {
+    position: relative;
+    background-color: rgba(255, 192, 203, 0.5);
+    width: 70%;
+    height: 97vh;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.678);
+    border-radius: 3px;
+}
+
+.back {
+    position: absolute;
+    right: 0;   
+}
+
+.back ion-icon {
+    font-size: 30px;
+    background-color: pink;
+    border: 1px solid rgba(0, 0, 0, 0.678);
+    border-top: 0;
+    border-right: 0;
+    color: black;
+    border-top-right-radius: 3px;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.507);
+}
+
+table tr td {
+    padding: 10px;
+    border: 0.5px solid rgba(0, 0, 0, 0.164);
+}
+
+.client {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: pink;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+}
+
+.id {
+    color: red;
+}
+
+.valid-id {
+    display: flex;
+    margin: auto;
+    height: 150px;
+    width: 250px;
+}
+
+.appointment {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: pink;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+}
+
+.receipt img{
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.btn td {
+    text-align: center;
+    position: relative;
+}
+
+.btn td a {
+    text-decoration: none;
+    background-color: pink;
+    color: black;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+.btn td a:hover {
+    background-color: rgba(255, 192, 203, 0.479);
+}
+
+.edit {
+    padding: 10px 25px;
+}
+
+.delete {
+    padding: 10px 20px;
+    float: left;
+}
+
+.edittd {
+    border-right: none !important;
+    border-left: none !important;
+}
+
+.deltd {
+    border-left: none !important;
+}
+
+.reason {
+    color: blue;
+}
