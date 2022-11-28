@@ -38,7 +38,7 @@ if (isset($_SESSION["user_id"])) {
             </ul>
         </nav>
         <div class="reservation">
-            <h1 class="app-title">Appointment</h1>
+            <h1 class="app-title">Cancelled Appointment</h1>
             <table>
                 <tr class="table-head">
                     <td>ID</td>
