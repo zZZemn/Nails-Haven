@@ -10,8 +10,8 @@ if (isset($_SESSION["user_id"])) {
     $result = $mysqli->query($sql);
     $user = $result->fetch_assoc();
     
-    $reservation = "SELECT * FROM reservation ORDER by app_date";
-    $reservation_result = $mysqli->query($reservation);
+    $cancelledreservation = "SELECT * FROM cancel_appointment";
+    $cancelled_result = $mysqli->query($cancelledreservation);
 }
 
 ?>
@@ -19,10 +19,10 @@ if (isset($_SESSION["user_id"])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reservation</title>
+    <title>Cancelled Reservation</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin-nav.css">
-    <link rel="stylesheet" href="current-reservation.css">
+    <link rel="stylesheet" href="cancelled-reservation.css">
 </head>
 <body>
     <?php if (isset($user)): ?>
@@ -30,8 +30,8 @@ if (isset($_SESSION["user_id"])) {
             <img src="img/logo.png" alt="Nails Haven">
             <ul>
                 <li><a href="admin-profile.php" class="name"><?= htmlspecialchars($user['name']) ?></a></li>
-                <li><a class="Current-Reservation" href="admin.php" class="Current-Reservation">Current Reservation</a></li>
-                <li><a href="cancelled.php">Cancelled Reservation</a></li>
+                <li><a href="admin.php" class="Current-Reservation">Current Reservation</a></li>
+                <li><a class="cancelled" href="#">Cancelled Reservation</a></li>
                 <li><a href="#">Inventory</a></li>
                 <li><a href="#">Sales</a></li>
                 <li><a href="logout.php">Log Out</a></li>
@@ -50,8 +50,8 @@ if (isset($_SESSION["user_id"])) {
                     <td colspan="2">Action</td>
                 </tr>
 
-                <?php  if ($reservation_result->num_rows > 0) {
-                            while($row = $reservation_result->fetch_assoc()) {
+                <?php  if ($cancelled_result->num_rows > 0) {
+                            while($row = $cancelled_result->fetch_assoc()) {
                                 $time = $row['app_time'];
                                 $mod_time = substr($time,0,5);
                                     echo "<tr>

@@ -33,7 +33,7 @@ if (isset($_SESSION["user_id"])) {
             <ul>
                 <li><a href="admin-profile.php" class="name"><?= htmlspecialchars($user["name"]) ?></a></li>
                 <li><a href="admin.php">Current Reservation</a></li>
-                <li><a href="#">Reservation Archive</a></li>
+                <li><a href="cancelled.php">Cancelled Reservation</a></li>
                 <li><a href="#">Inventory</a></li>
                 <li><a href="#">Sales</a></li>
                 <li><a href="logout.php">Log Out</a></li>
