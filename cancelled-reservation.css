@@ -1,13 +1,17 @@
-.cancelled {
+.Current-Reservation {
     font-weight: 600;
 }
 
 .reservation {
     position: relative;
-    margin-left: 200px;
-    width: 83.9%;
-    height: 100vh;
-    padding: 3% 3%;
+    left: 245px;
+    top: 35px;
+    width: 78.9%;
+    height: 90vh;
+    padding: 4%;
+    background-color: rgba(255, 192, 203, 0.226);
+    border: 1px solid pink;
+    border-radius: 10px;
 }
 
 .reservation table {
@@ -72,4 +76,8 @@
 
 .btn2 a:hover {
     background-color: rgb(255, 203, 203);
+}
+
+td {
+    text-align: center;
 }
