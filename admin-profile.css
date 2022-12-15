@@ -34,7 +34,8 @@ hr {
 
 .first-row img {
     height: 120px;
-    border-radius: 50%;
+    width: 110px;
+    border-radius: 50% !important;
     background-color: white;
     border: 2px solid pink;
     margin-right: 5%;

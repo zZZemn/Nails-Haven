@@ -41,7 +41,7 @@ if (isset($_SESSION["user_id"])) {
         </nav>
         <div class="admin-profile-content">
             <div class="first-row">
-                <img src="img/<?= $user2['picture']?>" alt="Admin">
+                <img src="img/admin-picture.jpg" alt="Admin">
                 <div class="admin-name-container">
                     <h1><?= htmlspecialchars($user["name"]) ?></h1>  
                     <h5><?= htmlspecialchars($user2["position"]) ?></h5>
